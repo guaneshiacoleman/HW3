@@ -1,0 +1,256 @@
+/* =========================
+   GENERAL STYLING
+========================= */
+
+/* Removes default browser spacing */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styles the entire page */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ff00b3;
+    color: #333333;
+    line-height: 1.6;
+    width: 100%;
+}
+
+/* Makes images fit inside their containers */
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* =========================
+   NAVIGATION BAR
+========================= */
+
+header {
+    background-color: white;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    padding: 24px;
+}
+
+.logo {
+    color: #8E7AB5;
+    font-size: 24px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 24px;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    color: #333333;
+    text-decoration: none;
+}
+
+
+/* =========================
+   HERO SECTION
+========================= */
+
+#hero {
+    background-color: #5c0bff;
+    color: white;
+    text-align: center;
+
+    padding: 96px 24px;
+}
+
+#hero h1 {
+    font-size: 40px;
+    margin-bottom: 24px;
+}
+
+#hero p {
+    margin-bottom: 24px;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.button {
+    display: inline-block;
+    background-color: #b10fce;
+    color: #333333;
+
+    padding: 12px 24px;
+
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+
+/* =========================
+   FEATURE SECTION
+========================= */
+
+.features {
+    padding: 64px 24px;
+    text-align: center;
+}
+
+.features h2 {
+    color: #8E7AB5;
+    margin-bottom: 32px;
+}
+
+/* Flexbox creates three columns */
+
+.feature-container {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+/* Styles each card */
+
+.feature-card {
+    background-color: white;
+    padding: 32px 24px;
+    border-radius: 8px;
+
+    flex: 1 1 250px;
+    min-width: 0;
+}
+
+.feature-card h3 {
+    color: #8E7AB5;
+    margin-bottom: 16px;
+}
+
+
+/* =========================
+   ABOUT SECTION
+========================= */
+
+.about-section {
+    text-align: center;
+    padding: 96px 24px;
+    min-height: 70vh;
+}
+
+.about-section h1 {
+    color: #8E7AB5;
+    margin-bottom: 24px;
+}
+
+.about-section p {
+    margin-bottom: 24px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background-color: #8E7AB5;
+    color: white;
+    text-align: center;
+    padding: 24px;
+}
+
+
+/* =========================
+   TABLET VIEW
+   768px and smaller
+========================= */
+
+@media screen and (max-width: 768px) {
+
+    /* Navigation adjusts for smaller screens */
+
+    .navbar {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    /* Hero section becomes smaller */
+
+    #hero {
+        padding: 64px 24px;
+    }
+
+    #hero h1 {
+        font-size: 32px;
+    }
+
+    /* Cards display in two columns when space allows */
+
+    .feature-card {
+        flex: 1 1 45%;
+    }
+
+}
+
+
+/* =========================
+   MOBILE VIEW
+   480px and smaller
+========================= */
+
+@media screen and (max-width: 480px) {
+
+    /* Navigation stacks vertically */
+
+    .navbar {
+        flex-direction: column;
+        padding: 16px;
+    }
+
+    .nav-links {
+        justify-content: center;
+        gap: 16px;
+    }
+
+    /* Smaller heading for phones */
+
+    #hero h1 {
+        font-size: 28px;
+    }
+
+    #hero {
+        padding: 48px 16px;
+    }
+
+    /* Feature cards stack in one column */
+
+    .features {
+        padding: 48px 16px;
+    }
+
+    .feature-container {
+        flex-direction: column;
+    }
+
+    .feature-card {
+        width: 100%;
+    }
+
+    .about-section {
+        padding: 48px 16px;
+    }
+
+}
